@@ -1,4 +1,6 @@
 how to run?
+＝＝＝＝
 npm run build
-how to start server?
-npm run server
+－－－－－－－
+＃how to start server?
+＃＃npm run server
