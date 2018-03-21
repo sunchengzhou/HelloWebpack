@@ -4,7 +4,7 @@ const HtmlWebpackPlugin=require("html-webpack-plugin");
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports={
     devtool:"eval-source-map",
-    entry:path.resolve(__dirname+"/app/main.js"),
+    entry:path.resolve(__dirname+"/app/main.jsx"),
     output:{
         path:path.resolve(__dirname+"/public"),
         filename:"bundle-[hash].js"
@@ -18,11 +18,24 @@ module.exports={
     module: {
         rules: [
             {
-                test: /(\.jsx|\.js)$/,
+                test: /\.jsx$/,
+                exclude: /node_modules/,
                 use: {
-                    loader: "babel-loader",
-                },
-                exclude: /node_modules/
+                  loader: 'babel-loader',
+                  options: {
+                    presets: ['env', 'react']
+                  }
+                }
+            },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                  loader: 'babel-loader',
+                  options: {
+                    presets: ['env']
+                  }
+                }
             },
             {
                 test: /\.css$/,
