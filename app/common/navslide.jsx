@@ -6,7 +6,7 @@ class Navslide extends React.Component{
   }
   render(){
     return (
-      <div>navslide</div>
+      <div>navsssslide</div>
     )
   }
 }
