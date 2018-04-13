@@ -6,9 +6,12 @@ class Index extends React.Component{
   }
   render(){
     return (
-      <div>
-        index.page
-        <Link to="/info"/>
+      <div className="jumbotron masthead"> 
+        <div className="container">
+          <h1>前端简介</h1>
+          <p>当前流行的三大框架vue,react,angular</p>
+         <button className="btn btn-primary">点击进入专题</button>
+        </div>
       </div>
     )
   }

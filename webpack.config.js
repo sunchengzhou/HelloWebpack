@@ -50,7 +50,11 @@ module.exports={
                         loader:"postcss-loader"
                     }
                 ]
-            }         
+            },
+            {
+                test: /\.scss$/,
+                loader: 'style-loader!css-loader!sass-loader!postcss-loader'
+              }          
         ]
     },
     plugins:[
